@@ -1,5 +1,9 @@
 // list-printers.js
-const res = await fetch("http://localhost:9100/available");
-const data = await res.json();
-console.log("Available printers:");
-data.printer.forEach(p => console.log(" -", p.name));
+import { listZebraPrinters } from './usb-printer.js';
+
+const printers = await listZebraPrinters();
+console.log("Connected Zebra printers:");
+if (printers.length === 0) console.log("  (none found)");
+printers.forEach(p => console.log(
+  ` - ${p.name}  serial=${p.serial}  vendor=0x${p.vendor_id.toString(16)}  product=0x${p.product_id.toString(16)}`
+));

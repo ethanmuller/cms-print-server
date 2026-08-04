@@ -3,6 +3,7 @@
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1",
-    "https": "^1.0.0"
+    "https": "^1.0.0",
+    "usb": "^2.13.0"
   }
 }
