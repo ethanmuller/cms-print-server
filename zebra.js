@@ -49,8 +49,8 @@ function largeLabelCustom({ text }) {
 ^XA
 ^PW812
 ^LL1218
-^FO50,50^A0R,80,80^FD${new Date().toLocaleDateString()}^FS
-^FO50,50^A0R,160,160^TB R,1168,730^FD${text}^FS
+^FO10,10^A0R,80,80^FB1118,1,0,R^FD${new Date().toLocaleDateString()}^FS
+^FO50,50^A0R,145,145^TB R,1168,730^FD${text}^FS
 ^XZ
   `.trim();
 }
@@ -74,8 +74,7 @@ function narrowLabelCustom({ text }) {
 ^PW203
 ^LL609
 ^LH0,0
-^FO108,127^A0R,66,66^FDFont size of^FS
-^FO29,156^A0R,66,66^FDsixty-five^FS
+^FO0,40^A0N,80,80^TB R,569,170^FD${text}^FS
 ^XZ
   `.trim();
 }
